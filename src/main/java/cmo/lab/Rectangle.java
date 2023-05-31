@@ -1,6 +1,6 @@
 package cmo.lab;
 
-public class Rectangle {
+public class Rectangle extends GeometricShape {
 
     private Point origin;
     private Point corner;

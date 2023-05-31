@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 class PointTest {
 
@@ -34,7 +34,7 @@ class PointTest {
 
         point.print();
 
-        assertEquals( "<1@2>", output.toString());
+        assertEquals("<1@2>", output.toString());
     }
 
 }
