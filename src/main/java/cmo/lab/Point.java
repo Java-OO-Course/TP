@@ -19,4 +19,9 @@ public class Point {
         return y;
     }
 
+    public void print()
+    {
+        System.out.print("<" + x + "@" + y + ">");
+    }
+
 }
