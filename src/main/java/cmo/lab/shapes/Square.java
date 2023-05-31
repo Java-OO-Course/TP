@@ -1,4 +1,4 @@
-package cmo.lab;
+package cmo.lab.shapes;
 
 /**
  * Cette classe est testée via RectangleTest.

@@ -1,4 +1,4 @@
-package cmo.lab;
+package cmo.lab.shapes;
 
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;

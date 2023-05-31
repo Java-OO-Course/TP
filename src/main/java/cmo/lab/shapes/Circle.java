@@ -1,4 +1,4 @@
-package cmo.lab;
+package cmo.lab.shapes;
 
 public class Circle extends GeometricShape {
 
