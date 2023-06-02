@@ -1,5 +1,7 @@
 package cmo.lab.shapes;
 
+import java.awt.*;
+
 public class Triangle extends GeometricShape {
 
     private Point a;
@@ -48,6 +50,13 @@ public class Triangle extends GeometricShape {
         int ab = length(a, b);
         int bc = length(b, c);
         return ac + ab + bc;
+    }
+
+    @Override
+    public void drawOn(Graphics g) {
+        g.drawLine(getA().getX(), getA().getY(), getB().getX(), getB().getY());
+        g.drawLine(getB().getX(), getB().getY(), getC().getX(), getC().getY());
+        g.drawLine(getA().getX(), getA().getY(), getC().getX(), getC().getY());
     }
 
     /**

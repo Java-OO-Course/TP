@@ -1,5 +1,7 @@
 package cmo.lab.shapes;
 
+import java.awt.*;
+
 public class Rectangle extends GeometricShape {
 
     private Point origin;
@@ -44,6 +46,11 @@ public class Rectangle extends GeometricShape {
     public int perimeter()
     {
         return (width() + height()) * 2;
+    }
+
+    @Override
+    public void drawOn(Graphics g) {
+        g.drawRect(this.getOrigin().getX(), this.getOrigin().getY(), this.width(), this.height());
     }
 
     public void print()

@@ -1,5 +1,7 @@
 package cmo.lab.shapes;
 
+import java.awt.*;
+
 public class Circle extends GeometricShape {
 
     private Point origin;
@@ -34,6 +36,12 @@ public class Circle extends GeometricShape {
     @Override
     public int perimeter() {
         return (int) (2 * Math.PI * radius);
+    }
+
+    @Override
+    public void drawOn(Graphics g) {
+
+        g.drawOval(getOrigin().getX(), getOrigin().getY(), getRadius(), getRadius());
     }
 
 }
