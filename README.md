@@ -1,6 +1,6 @@
 # LISEZ MOI ! TP de CMO
 
-Avant Mardi 13 Juin 2023, envoyer par email le dernier exercice du TP3 (sur les Booléens).
+Avant Mardi 13 Juin 2023, envoyer à valentin.bourcier@inria.fr le dernier exercice du TP3 (sur les Booléens).
 En pièces jointe vous mettrez une archive .zip contenant le dossier du projet.
 Le dossier du projet doit avoir une structure ressemblant à:
 
