@@ -1,6 +1,5 @@
 package cmo.lab.drawers;
 
-import cmo.lab.shapes.GeometricShape;
 import cmo.lab.shapes.Rectangle;
 
 import java.awt.*;
