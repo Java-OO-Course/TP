@@ -1,5 +1,9 @@
 package cmo.lab.shapes;
 
+import cmo.lab.drawers.GeometricShapeDrawer;
+import cmo.lab.drawers.RectangleDrawer;
+import cmo.lab.drawers.TriangleDrawer;
+
 import java.awt.*;
 
 public class Triangle extends GeometricShape {
@@ -52,13 +56,6 @@ public class Triangle extends GeometricShape {
         return ac + ab + bc;
     }
 
-    @Override
-    public void drawOn(Graphics g) {
-        g.drawLine(getA().getX(), getA().getY(), getB().getX(), getB().getY());
-        g.drawLine(getB().getX(), getB().getY(), getC().getX(), getC().getY());
-        g.drawLine(getA().getX(), getA().getY(), getC().getX(), getC().getY());
-    }
-
     /**
      * Utilisé uniquement pour le calcul des longueurs des segments du triangle.
      *
@@ -77,4 +74,8 @@ public class Triangle extends GeometricShape {
         return (int) Math.sqrt(aDeltaX + aDeltaY);
     }
 
+    @Override
+    public GeometricShapeDrawer newDrawer() {
+        return new TriangleDrawer(this);
+    }
 }

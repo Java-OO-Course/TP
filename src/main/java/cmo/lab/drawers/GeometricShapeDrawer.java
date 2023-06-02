@@ -4,9 +4,9 @@ import cmo.lab.shapes.*;
 
 import java.awt.Graphics;
 
-public class GeometricShapeDrawer {
+public abstract class GeometricShapeDrawer {
 
-    private GeometricShape shape;
+    protected GeometricShape shape;
 
     public GeometricShapeDrawer(GeometricShape aShape) {
         shape = aShape;
@@ -16,10 +16,5 @@ public class GeometricShapeDrawer {
         return shape;
     }
 
-    public void drawOn(Graphics graphics) {
-
-        shape.drawOn(graphics);
-
-    }
-
+    public abstract void drawOn(Graphics g);
 }

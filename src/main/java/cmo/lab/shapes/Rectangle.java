@@ -1,5 +1,8 @@
 package cmo.lab.shapes;
 
+import cmo.lab.drawers.GeometricShapeDrawer;
+import cmo.lab.drawers.RectangleDrawer;
+
 import java.awt.*;
 
 public class Rectangle extends GeometricShape {
@@ -49,8 +52,8 @@ public class Rectangle extends GeometricShape {
     }
 
     @Override
-    public void drawOn(Graphics g) {
-        g.drawRect(this.getOrigin().getX(), this.getOrigin().getY(), this.width(), this.height());
+    public GeometricShapeDrawer newDrawer() {
+        return new RectangleDrawer(this);
     }
 
     public void print()

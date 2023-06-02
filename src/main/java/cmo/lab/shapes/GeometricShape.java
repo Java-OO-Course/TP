@@ -9,11 +9,6 @@ public abstract class GeometricShape {
     public abstract int area();
     public abstract int perimeter();
 
-    public GeometricShapeDrawer newDrawer()
-    {
-        return new GeometricShapeDrawer(this);
-    }
-
-    public abstract void drawOn(Graphics g);
+    public abstract GeometricShapeDrawer newDrawer();
 
 }

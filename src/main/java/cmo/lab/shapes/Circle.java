@@ -1,5 +1,9 @@
 package cmo.lab.shapes;
 
+import cmo.lab.drawers.CircleDrawer;
+import cmo.lab.drawers.GeometricShapeDrawer;
+import cmo.lab.drawers.RectangleDrawer;
+
 import java.awt.*;
 
 public class Circle extends GeometricShape {
@@ -39,9 +43,8 @@ public class Circle extends GeometricShape {
     }
 
     @Override
-    public void drawOn(Graphics g) {
-
-        g.drawOval(getOrigin().getX(), getOrigin().getY(), getRadius(), getRadius());
+    public GeometricShapeDrawer newDrawer() {
+        return new CircleDrawer(this);
     }
 
 }
