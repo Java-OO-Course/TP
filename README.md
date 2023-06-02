@@ -18,5 +18,4 @@ https://github.com/Java-OO-Course/TP/blob/tp3/src/main/java/cmo/lab/Exemple.java
 ----
 
 Si vous n'avez pas compris les instructions concernant l'exercice à rendre par email avant Mardi 13 suivez:
-https://github.com/Java-OO-Course/TP/README.md
-
+https://github.com/Java-OO-Course/TP/blob/main/README.md
