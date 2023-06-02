@@ -1,10 +1,7 @@
 package cmo.lab.shapes;
 
 import cmo.lab.drawers.GeometricShapeDrawer;
-import cmo.lab.drawers.RectangleDrawer;
 import cmo.lab.drawers.TriangleDrawer;
-
-import java.awt.*;
 
 public class Triangle extends GeometricShape {
 
