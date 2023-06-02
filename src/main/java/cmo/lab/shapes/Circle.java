@@ -2,9 +2,6 @@ package cmo.lab.shapes;
 
 import cmo.lab.drawers.CircleDrawer;
 import cmo.lab.drawers.GeometricShapeDrawer;
-import cmo.lab.drawers.RectangleDrawer;
-
-import java.awt.*;
 
 public class Circle extends GeometricShape {
 
@@ -42,6 +39,11 @@ public class Circle extends GeometricShape {
         return (int) (2 * Math.PI * radius);
     }
 
+    /**
+     * Chaque objet retourne une nouvelle instance du drawer qui lui correspond.
+     * Et ce, en se passant en lui-même (avec "this") en argument,
+     * de sorte à ce que le drawer puisse le dessiner.
+     */
     @Override
     public GeometricShapeDrawer newDrawer() {
         return new CircleDrawer(this);
