@@ -1,6 +1,11 @@
-package cmo.lab;
+package cmo.lab.shapes;
 
-public class Rectangle {
+import cmo.lab.drawers.GeometricShapeDrawer;
+import cmo.lab.drawers.RectangleDrawer;
+
+import java.awt.*;
+
+public class Rectangle extends GeometricShape {
 
     private Point origin;
     private Point corner;
@@ -44,6 +49,11 @@ public class Rectangle {
     public int perimeter()
     {
         return (width() + height()) * 2;
+    }
+
+    @Override
+    public GeometricShapeDrawer newDrawer() {
+        return new RectangleDrawer(this);
     }
 
     public void print()
