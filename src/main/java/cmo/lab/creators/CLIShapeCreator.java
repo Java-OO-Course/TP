@@ -19,6 +19,6 @@ public abstract class CLIShapeCreator {
      * Les implémentations de cette méthode doivent permettre à l'utilisateur
      * de définir depuis la console les paramètres de création d'une forme géométrique.
      */
-    abstract GeometricShape command();
+    public abstract GeometricShape command();
 
 }

@@ -10,7 +10,7 @@ public class Exemple {
 
     public static void main(String[] args) {
 
-        // Liste de forme géométrique qui seront dessinées.
+        // Liste de formes géométriques qui seront dessinées.
         ArrayList<GeometricShape> shapes = new ArrayList<>();
 
         // Création des formes depuis la console.

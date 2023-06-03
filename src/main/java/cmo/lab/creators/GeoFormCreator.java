@@ -12,20 +12,19 @@ public class GeoFormCreator {
     }
 
     /**
-     * Cette méthode demande à l'utilisateur le nom d'une forme à dessiner.
+     * Cette méthode demande à l'utilisateur le nom d'une forme à créer.
      * Elle doit vous servir d'exemple pour la création des sous-classes de CLIShapeCreator.
      *
-     *
-     * Regardez dans la classe Example (dans le package cmo.lab) pour voir comment la méthode sera activée.
+     * Regardez dans la classe Exemple (dans le package cmo.lab) pour voir comment la méthode sera activée.
      */
     public GeometricShape create()
     {
-        System.out.print("Choisissez une forme à dessiner: ");
+        System.out.print("Choisissez une forme à créer: ");
         return create(cli.scanCommand());
     }
 
     /**
-     * Regardez dans la classe Example (dans le package cmo.lab) pour voir comment la méthode sera activée.
+     * Regardez dans la classe Exemple (dans le package cmo.lab) pour voir comment la méthode sera activée.
      */
     public GeometricShape create(String aShape)
     {

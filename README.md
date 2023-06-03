@@ -1,6 +1,6 @@
 # LISEZ MOI ! TP de CMO
 
-Pour compléter l'exercice 2 du TP3 en anticipation de la scéance du Mardi 13 vous avez à votre disposition.
+Pour compléter l'exercice 2 du TP3 en anticipation de la séance du Mardi 13 vous avez à votre disposition.
 
 La classe CommandLineInterface qui doit, par un appel à `scanCommand()` demander à l'utilisateur une entrée:
 https://github.com/Java-OO-Course/TP/blob/tp3/src/main/java/cmo/lab/creators/CommandLineInterface.java
