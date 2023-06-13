@@ -7,6 +7,10 @@ public class Point {
 
     public Point(int aX, int aY)
     {
+        if(aX < 0 || aY < 0)
+        {
+            throw new WrongCoordinatesException("Point inferior to 0@0 does not exists");
+        }
         x = aX;
         y = aY;
     }
