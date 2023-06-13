@@ -10,4 +10,5 @@ public class UnknownCommand extends Exception {
     {
         super("Error no command available for: " + aCommand);
     }
+
 }
