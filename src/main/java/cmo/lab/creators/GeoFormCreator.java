@@ -2,25 +2,33 @@ package cmo.lab.creators;
 
 import cmo.lab.shapes.GeometricShape;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class GeoFormCreator {
 
     private CommandLineInterface cli;
+    private Map<String, CLIShapeCreator> commands;
 
     public GeoFormCreator()
     {
         cli = new CommandLineInterface();
+        commands = new HashMap<>();
+        commands.put("RECTANGLE", new RectangleCreator());
+        commands.put("CIRCLE", new CircleCreator());
+        commands.put("TRIANGLE", new TriangleCreator());
+        commands.put("SQUARE", new SquareCreator());
     }
 
-    /**
-     * Cette méthode demande à l'utilisateur le nom d'une forme à créer.
-     * Elle doit vous servir d'exemple pour la création des sous-classes de CLIShapeCreator.
-     *
-     * Regardez dans la classe Exemple (dans le package cmo.lab) pour voir comment la méthode sera activée.
-     */
-    public GeometricShape create()
+    public GeometricShape create() throws UnknownCommand
     {
-        System.out.print("Choisissez une forme à créer: ");
-        return create(cli.scanCommand());
+        System.out.print("Please write a form to create (RECTANGLE, SQUARE, CIRCLE, TRIANGLE): ");
+        String shape = cli.scanCommand();
+        if(!commands.containsKey(shape))
+        {
+            throw new UnknownCommand(shape);
+        }
+        return create(shape);
     }
 
     /**
@@ -28,14 +36,16 @@ public class GeoFormCreator {
      */
     public GeometricShape create(String aShape)
     {
-        // TODO: TP3 Exercice 2.
-        // Dans cette méthode vous devez faire en sorte de choisir
-        // le bon CLIShapeCreator en fonction de la chaîne de
-        // caractères donnée en arguments.
-        // Il faudra renvoyer la forme géométrique une fois créee par
-        // l'objet héritant de CLIShapeCreator.
+        try
+        {
+            return commands.get(aShape).command();
+        }
+        catch (NumberFormatException exception)
+        {
+            System.out.println("Error, geometric shapes creation requires arguments of type integer, please retry.");
+            return create(aShape);
+        }
 
-        return null;
     }
 
 }

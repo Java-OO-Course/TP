@@ -3,7 +3,6 @@ package cmo.lab.creators;
 import cmo.lab.shapes.GeometricShape;
 
 /**
- * TODO: TP3 exercice 2
  * Cette classe abstraite doit être étendue par des classes qui implémenteront la méthode "command()".
  */
 public abstract class CLIShapeCreator {

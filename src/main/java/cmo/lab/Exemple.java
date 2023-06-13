@@ -1,12 +1,26 @@
 package cmo.lab;
 
 import cmo.lab.creators.GeoFormCreator;
+import cmo.lab.creators.UnknownCommand;
 import cmo.lab.painter.PainterApp;
 import cmo.lab.shapes.GeometricShape;
 
 import java.util.ArrayList;
 
 public class Exemple {
+
+    public static GeometricShape safeCreate(GeoFormCreator creator)
+    {
+        try
+        {
+            return creator.create();
+        }
+        catch (UnknownCommand exception)
+        {
+            System.out.println(exception.getMessage());
+            return safeCreate(creator);
+        }
+    }
 
     public static void main(String[] args) {
 
@@ -17,7 +31,7 @@ public class Exemple {
         GeoFormCreator creator = new GeoFormCreator();
 
         // Demande à l'utilisateur de choisir et créer une forme, puis l'ajoute à la liste.
-        shapes.add(creator.create());
+        shapes.add(safeCreate(creator));
 
         // Demande à l'utilisateur de créer un rectangle, puis l'ajoute à la liste.
         shapes.add(creator.create("RECTANGLE"));
